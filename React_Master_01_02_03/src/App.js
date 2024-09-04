@@ -1,9 +1,9 @@
-import { product } from "prelude-ls";
+import {product} from "prelude-ls";
 
 const products = [
-    { title: 'Cabbage', isFruit: false, id: 1 },
-    { title: 'Garlic', isFruit: false, id: 2 },
-    { title: 'Apple', isFruit: true, id: 13 },
+    {title: 'Cabbage', isFruit: false, id: 1},
+    {title: 'Garlic', isFruit: false, id: 2},
+    {title: 'Apple', isFruit: true, id: 13},
 ];
 
 export default function ShoppingList() {
