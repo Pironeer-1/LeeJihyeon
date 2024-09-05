@@ -17,16 +17,24 @@
 //     return <li className="item">{name}</li>;
 // }
 
+// function Item({ name, isPacked }) {
+//     return (
+//         <li className="item">
+//             {isPacked ? (
+//                 <del>
+//                     {name + '✔'}
+//                 </del>
+//             ) : (
+//                 name
+//             )}
+//         </li>
+//     );
+// }
+
 function Item({ name, isPacked }) {
     return (
         <li className="item">
-            {isPacked ? (
-                <del>
-                    {name + '✔'}
-                </del>
-            ) : (
-                name
-            )}
+            {name} {isPacked && '✔'}
         </li>
     );
 }
