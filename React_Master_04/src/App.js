@@ -211,7 +211,8 @@
 //     );
 // }
 
-import { useState } from 'react';
+//import { useState } from 'react';
+import { useImmer } from 'use-immer';
 
 let nextId = 3;
 const initialList = [
@@ -221,12 +222,10 @@ const initialList = [
 ];
 
 export default function BucketList() {
-    const [list, setList] = useState(
-        initialList
-    );
+    const [list, updateList] = useImmer(initialList);
 
     function handleToggle(artworkId, nextSeen) {
-        setList(list.map(artwork => {
+        updateList(list.map(artwork => {
             if (artwork.id === artworkId) {
                 return { ...artwork, seen: nextSeen };
             } else {
