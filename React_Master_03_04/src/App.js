@@ -27,16 +27,29 @@
 //     );
 // }
 
-const today = new Date();
-function formatDate(date) {
-    return new Intl.DateTimeFormat(
-        'en-US',
-        { weekday: 'long' }
-        ).format(date);
-}
+// const today = new Date();
+// function formatDate(date) {
+//     return new Intl.DateTimeFormat(
+//         'en-US',
+//         { weekday: 'long' }
+//         ).format(date);
+// }
+//
+// export default function TodoList() {
+//     return (
+//         <h1>To do List for {formatDate(today)}</h1>
+//     );
+// }
 
 export default function TodoList() {
     return (
-        <h1>To do List for {formatDate(today)}</h1>
+        <ul style={{
+            backgroundColor: 'black',
+            color: 'lightgreen'
+        }}>
+            <li>Improve the videophone</li>
+            <li>Prepare aeronautics lectures</li>
+            <li>Work on the alcohol-fuelled engine</li>
+        </ul>
     );
 }
