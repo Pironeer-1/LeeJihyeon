@@ -14,9 +14,17 @@ export default function Counter() {
           {/*    setNumber(n => n + 1);*/}
           {/*    setNumber(n => n + 1);*/}
           {/*}}>+3</button>*/}
+
+          {/*<button onClick={() => {*/}
+          {/*    setNumber(number + 5);*/}
+          {/*    setNumber(n => n + 1);*/}
+          {/*}}>Increase the number*/}
+          {/*</button>*/}
+
           <button onClick={() => {
               setNumber(number + 5);
               setNumber(n => n + 1);
+              setNumber(42);
           }}>Increase the number
           </button>
       </>
