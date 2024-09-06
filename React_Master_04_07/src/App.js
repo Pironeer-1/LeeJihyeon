@@ -159,6 +159,7 @@
 // }
 
 import {useState} from 'react';
+import { useImmer } from 'use-immer';
 
 let nextId = 3;
 const initialList = [
@@ -191,13 +192,11 @@ const initialList = [
 // }
 
 export default function BucketList() {
-    const [myList, setMyList] = useState(initialList);
-    const [yourList, setYourList] = useState(
-        initialList
-    );
+    const [myList, updateMyList] = useImmer(initialList);
+    const [yourList, updateYourList] = useImmer(initialList);
 
     function handleToggleMyList(artworkId, nextSeen) {
-        setMyList(myList.map(artwork => {
+        updateMyList(myList.map(artwork => {
             if (artwork.id === artworkId) {
                 // Create a *new* object with changes
                 return {...artwork, seen: nextSeen};
@@ -209,7 +208,7 @@ export default function BucketList() {
     }
 
     function handleToggleYourList(artworkId, nextSeen) {
-        setYourList(yourList.map(artwork => {
+        updateYourList(yourList.map(artwork => {
             if (artwork.id === artworkId) {
                 // Create a *new* object with changes
                 return {...artwork, seen: nextSeen};
