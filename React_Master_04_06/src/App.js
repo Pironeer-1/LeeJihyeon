@@ -104,10 +104,10 @@
 //     );
 // }
 
-import {useState} from 'react';
+import { useImmer } from 'use-immer';
 
 export default function Form() {
-    const [person, setPerson] = useState({
+    const [person, updatePerson] = useImmer({
         name: 'Niki de Saint Phalle',
         artwork: {
             title: 'Blue Nana',
@@ -117,14 +117,14 @@ export default function Form() {
     });
 
     function handleNameChange(e) {
-        setPerson({
+        updatePerson({
             ...person,
             name: e.target.value
         });
     }
 
     function handleTitleChange(e) {
-        setPerson({
+        updatePerson({
             ...person,
             artwork: {
                 ...person.artwork,
@@ -134,7 +134,7 @@ export default function Form() {
     }
 
     function handleCityChange(e) {
-        setPerson({
+        updatePerson({
             ...person,
             artwork: {
                 ...person.artwork,
@@ -144,7 +144,7 @@ export default function Form() {
     }
 
     function handleImageChange(e) {
-        setPerson({
+        updatePerson({
             ...person,
             artwork: {
                 ...person.artwork,
