@@ -41,24 +41,31 @@ export default function Form() {
         email: 'bhepworth@sculpture.com'
     });
 
-    function handleFirstNameChange(e) {
-        setPerson({
-            ...person,
-            firstName: e.target.value
-        });
-    }
+    // function handleFirstNameChange(e) {
+    //     setPerson({
+    //         ...person,
+    //         firstName: e.target.value
+    //     });
+    // }
+    //
+    // function handleLastNameChange(e) {
+    //     setPerson({
+    //         ...person,
+    //         lastName: e.target.value
+    //     });
+    // }
+    //
+    // function handleEmailChange(e) {
+    //     setPerson({
+    //         ...person,
+    //         email: e.target.value
+    //     });
+    // }
 
-    function handleLastNameChange(e) {
+    function handleChange(e) {
         setPerson({
             ...person,
-            lastName: e.target.value
-        });
-    }
-
-    function handleEmailChange(e) {
-        setPerson({
-            ...person,
-            email: e.target.value
+            [e.target.name]: e.target.value
         });
     }
 
@@ -67,22 +74,25 @@ export default function Form() {
             <label>
                 First name:
                 <input
+                    name="firstName"
                     value={person.firstName}
-                    onChange={handleFirstNameChange}
+                    onChange={handleChange}
                 />
             </label>
             <label>
                 Last name:
                 <input
+                    name="lastName"
                     value={person.lastName}
-                    onChange={handleLastNameChange}
+                    onChange={handleChange}
                 />
             </label>
             <label>
                 Email:
                 <input
+                    name="email"
                     value={person.email}
-                    onChange={handleEmailChange}
+                    onChange={handleChange}
                 />
             </label>
             <p>
