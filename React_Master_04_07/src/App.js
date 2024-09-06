@@ -197,21 +197,27 @@ export default function BucketList() {
     );
 
     function handleToggleMyList(artworkId, nextSeen) {
-        const myNextList = [...myList];
-        const artwork = myNextList.find(
-            a => a.id === artworkId
-        );
-        artwork.seen = nextSeen;
-        setMyList(myNextList);
+        setMyList(myList.map(artwork => {
+            if (artwork.id === artworkId) {
+                // Create a *new* object with changes
+                return {...artwork, seen: nextSeen};
+            } else {
+                // No changes
+                return artwork;
+            }
+        }));
     }
 
     function handleToggleYourList(artworkId, nextSeen) {
-        const yourNextList = [...yourList];
-        const artwork = yourNextList.find(
-            a => a.id === artworkId
-        );
-        artwork.seen = nextSeen;
-        setYourList(yourNextList);
+        setYourList(yourList.map(artwork => {
+            if (artwork.id === artworkId) {
+                // Create a *new* object with changes
+                return {...artwork, seen: nextSeen};
+            } else {
+                // No changes
+                return artwork;
+            }
+        }));
     }
 
     return (
