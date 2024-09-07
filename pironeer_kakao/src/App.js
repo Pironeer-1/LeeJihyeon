@@ -1,11 +1,9 @@
-
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import FriendsPage from './pages/FriendsPage';
 import ChatPage from './pages/ChatPage';
 import styled from 'styled-components'; // styled-components 라이브러리 import
 
-// 아이콘은 예시입니다. 적절한 아이콘을 사용하세요.
 import {FaSearch, FaUserFriends, FaMusic} from 'react-icons/fa';
 
 const App = () => {
