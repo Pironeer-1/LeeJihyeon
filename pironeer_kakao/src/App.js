@@ -1,36 +1,32 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Link, Navigate} from 'react-router-dom';
 import FriendsPage from './pages/FriendsPage';
 import ChatPage from './pages/ChatPage';
-import styled from 'styled-components'; // styled-components 라이브러리 import
+import styled from 'styled-components';
 
 import {FaSearch, FaUserFriends, FaMusic} from 'react-icons/fa';
 
 const App = () => {
     return (
         <Router>
-            {/* 전체 컨테이너 */}
             <Container>
-                {/* 헤더 */}
                 <Header>
                     <FaSearch size={20} style={iconStyle}/>
                     <FaUserFriends size={20} style={iconStyle}/>
                     <FaMusic size={20} style={iconStyle}/>
                 </Header>
 
-                {/* 네비게이션 메뉴 */}
+                <Content>
+                    <Routes>
+                        <Route path="/" element={<Navigate to="/friends" replace />} />
+                        <Route path="/friends" element={<FriendsPage/>}/>
+                        <Route path="/chat" element={<ChatPage/>}/>
+                    </Routes>
+                </Content>
 
-
-                {/* 페이지 내용 */}
-                <Routes>
-                    <Route path="/friends" element={<FriendsPage/>}/>
-                    <Route path="/chat" element={<ChatPage/>}/>
-                </Routes>
-
-                {/* 푸터 */}
                 <Footer>
-                    <Link to="/friends">친구</Link>
-                    <Link to="/chat">채팅</Link>
+                    <FooterLink to="/friends">친구</FooterLink>
+                    <FooterLink to="/chat">채팅</FooterLink>
                 </Footer>
             </Container>
         </Router>
@@ -41,8 +37,6 @@ const App = () => {
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
     max-width: 480px;
     height: 100vh;
@@ -59,22 +53,10 @@ const Header = styled.header`
     width: 100%;
 `;
 
-const Nav = styled.nav`
-    text-align: center;
-    margin: 20px 0;
+const Content = styled.div`
+    flex: 1;
+    overflow-y: auto;
 `;
-
-const ulStyle = {
-    listStyleType: 'none',
-    padding: 0,
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '20px'
-};
-
-const liStyle = {
-    margin: '0 10px'
-};
 
 const Footer = styled.footer`
     display: flex;
@@ -84,6 +66,12 @@ const Footer = styled.footer`
     border-top: 1px solid #ddd;
     width: 100%;
     background-color: #fff;
+`;
+
+const FooterLink = styled(Link)`
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
 `;
 
 const iconStyle = {
