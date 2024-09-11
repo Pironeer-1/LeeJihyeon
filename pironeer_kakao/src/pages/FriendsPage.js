@@ -42,6 +42,7 @@ const ProfileImage = styled.img`
 `;
 
 const ProfileName = styled.span`
+    font-weight: 400;
     font-size: 15px;
 `;
 
@@ -132,6 +133,7 @@ const FriendImage = styled.img`
 `;
 
 const FriendName = styled.span`
+    font-weight: 400;
     font-size: 15px;
 `;
 
