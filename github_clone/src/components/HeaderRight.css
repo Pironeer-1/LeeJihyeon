@@ -1,0 +1,53 @@
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+  
+.icon-button {
+  width: 32px;
+  height: 32px;
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.plus-pic, .issue-pic, .pr-pic {
+  width: 20px;
+  height: 20px;
+}
+
+.inbox-pic {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-button i {
+  color: #586069;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0366d6;
+  border: 2px solid white;
+  border-radius: 50%;
+}
