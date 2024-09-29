@@ -1,0 +1,136 @@
+.sidebar {
+    width: 335px;
+    background-color: #ffffff;
+    padding: 35px 25px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid #e1e4e8;
+    margin-top: 51px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-image {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #e1e4e8;
+}
+
+.repo-name {
+    display: flex;
+    align-items: center;
+}
+
+.repository-item {
+    margin-left: 10px;
+}
+
+.red-pr {
+    width: 18px;
+    height: 18px;
+}
+
+.pr-activity {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+    color: #24292e;
+    margin-left: 10px;
+}
+
+.dropdown-arrow {
+    font-size: 8px;
+    margin-left: 8px;
+    color: #586069;
+}
+
+.repositories-section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #24292e;
+    margin-bottom: 10px;
+}
+
+.new-repo-button {
+    background-color: #0366d6;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    float: right;
+}
+
+.search-repo {
+    width: 100%;
+    padding: 8px 11px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #f6f8fa;
+    margin-top: 8px;
+}
+
+.repository-list {
+    list-style: none;
+    padding: 0;
+}
+
+.repository-item {
+    padding: 6.5px 0;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+}
+
+.repository-item:hover {
+    text-decoration: underline;
+}
+
+.show-more {
+    font-size: 12px;
+    color: #59636e;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.activity-section h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.activity-item {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #586069;
+}
+
+.repo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

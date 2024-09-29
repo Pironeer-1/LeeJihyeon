@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #f6f8fa;
+    border-bottom: 1px solid #e1e4e8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d1d5da;
+    border-radius: 7px;
+    background-color: #f6f8fa;
+    margin-right: 16px;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.github-logo {
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.dashboard-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #24292e;
+}
